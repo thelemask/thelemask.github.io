@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litery</title>
+    <style>
+        /* Стиль у дусі дзен-мінімалізму */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f4;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Стилі для інтерактивного блоку-посилання */
+        .app-link {
+            text-decoration: none;
+            display: inline-block;
+            color: inherit;
+            outline: none;
+        }
+
+        /* Елемент з іконкою та легка початкова анімація пульсації */
+        .icon-wrapper {
+            position: relative;
+            display: inline-block;
+            animation: gentle-pulse 3s infinite ease-in-out;
+        }
+
+        .app-icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 32px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        box-shadow 0.4s ease;
+        }
+
+        /* Текст під іконкою */
+        .app-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e2e;
+            margin-top: 15px;
+            transition: color 0.3s ease;
+        }
+
+        /* --- АНІМАЦІЯ ПРИ НАВЕДЕННІ (HOVER) --- */
+        .app-link:hover .app-icon {
+            /* Іконка збільшується та грайливо повертається */
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-link:hover .app-title {
+            color: #4a6b51; /* Текст стає трохи яскравішим */
+        }
+
+        .app-link:active .app-icon {
+            /* Ефект натискання */
+            transform: scale(0.98) rotate(-1deg);
+        }
+
+        /* Фонова пульсація для залучення уваги */
+        @keyframes gentle-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Посилання на App Store, що огортає всю кнопку -->
+    <a href="https://apps.apple.com/ua/app/color-blocks-sort-huefold/id6767253876" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="icon-wrapper">
+            <!-- Ваше зображення з назвою файлу 9 2.png -->
+            <img src="9 2.png" alt="Litery Icon" class="app-icon">
+        </div>
+        <div class="app-title">Litery</div>
+    </a>
+</div>
+
+</body>
+</html>
